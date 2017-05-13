@@ -21,7 +21,6 @@ class QRCodeReadingInstructions: UIViewController {
     private func setupUI() {
         makeQrCodeIconContainerCircle()
         makeOkButtonBordersRounded()
-        hideNavigationBar()
     }
 
     private func makeQrCodeIconContainerCircle() {
@@ -31,8 +30,5 @@ class QRCodeReadingInstructions: UIViewController {
     private func makeOkButtonBordersRounded() {
         okButton.layer.cornerRadius = 4
     }
-
-    private func hideNavigationBar() {
-        navigationController?.isNavigationBarHidden = true
-    }
+    
 }
