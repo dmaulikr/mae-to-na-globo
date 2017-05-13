@@ -174,15 +174,82 @@
                     <connections>
                         <outlet property="qrCodeFrame" destination="FEf-6A-ecr" id="6F9-Xa-Sqk"/>
                         <outlet property="qrCodeGuide" destination="34H-sf-AEH" id="OCA-aC-zH2"/>
+                        <segue destination="T45-bk-kbu" kind="show" identifier="" id="hf6-at-DHa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDI-ni-tfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472.80000000000001" y="328.78560719640183"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0vs-Fo-4hK">
+            <objects>
+                <viewController id="T45-bk-kbu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gAN-5k-3Sg"/>
+                        <viewControllerLayoutGuide type="bottom" id="pTj-9o-scE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tZ8-Ud-orv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programa encontrado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUQ-53-IZd">
+                                <rect key="frame" x="16" y="72" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centralize o QR code no frame abaixo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-7h-Te8">
+                                <rect key="frame" x="16" y="116" width="343" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umK-sC-OcJ">
+                                <rect key="frame" x="16" y="567" width="343" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="wjc-5S-IdY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Próximo">
+                                    <color key="titleColor" red="0.19215686269999999" green="0.56078431370000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SCD-LF-L80"/>
+                                    <constraint firstAttribute="height" constant="200" id="dNa-ga-bC2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tGH-bf-Rhy" firstAttribute="centerX" secondItem="tZ8-Ud-orv" secondAttribute="centerX" id="6xj-lA-lsD"/>
+                            <constraint firstItem="pTj-9o-scE" firstAttribute="top" secondItem="umK-sC-OcJ" secondAttribute="bottom" constant="8" symbolic="YES" id="8DX-1e-uO8"/>
+                            <constraint firstItem="oyS-7h-Te8" firstAttribute="trailing" secondItem="HUQ-53-IZd" secondAttribute="trailing" id="92h-C3-ecx"/>
+                            <constraint firstItem="tGH-bf-Rhy" firstAttribute="centerY" secondItem="tZ8-Ud-orv" secondAttribute="centerY" id="F87-Wf-fot"/>
+                            <constraint firstItem="tGH-bf-Rhy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oyS-7h-Te8" secondAttribute="bottom" constant="8" symbolic="YES" id="GWi-YZ-KUx"/>
+                            <constraint firstItem="oyS-7h-Te8" firstAttribute="top" secondItem="HUQ-53-IZd" secondAttribute="bottom" constant="8" id="IKS-45-AeY"/>
+                            <constraint firstItem="HUQ-53-IZd" firstAttribute="top" secondItem="gAN-5k-3Sg" secondAttribute="bottom" constant="8" symbolic="YES" id="MUr-4s-6tP"/>
+                            <constraint firstItem="oyS-7h-Te8" firstAttribute="leading" secondItem="HUQ-53-IZd" secondAttribute="leading" id="aTq-xY-4wI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HUQ-53-IZd" secondAttribute="trailing" id="bML-2E-ddX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="umK-sC-OcJ" secondAttribute="trailing" id="qYX-vh-bek"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="umK-sC-OcJ" secondAttribute="leading" id="rTz-pW-xau"/>
+                            <constraint firstItem="umK-sC-OcJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tGH-bf-Rhy" secondAttribute="bottom" constant="8" symbolic="YES" id="uYw-g4-7MG"/>
+                            <constraint firstItem="HUQ-53-IZd" firstAttribute="leading" secondItem="tZ8-Ud-orv" secondAttribute="leadingMargin" id="utV-4l-ve2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvz-DQ-Qcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="329"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="logoEncontro" width="112" height="112"/>
         <image name="qrCodeIcon" width="64" height="64"/>
     </resources>
 </document>
