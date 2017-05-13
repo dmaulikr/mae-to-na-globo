@@ -12,6 +12,9 @@ import UIKit
 class AVSelfCamera: NSObject {
 
     fileprivate var captureSession: AVCaptureSession?
+    fileprivate let photoOutput = AVCapturePhotoOutput()
+    fileprivate var takePhotoCompletion: ((UIImage) -> Void)?
+
     fileprivate(set) var videoPreview = CALayer()
 
     override init() {
@@ -33,6 +36,8 @@ class AVSelfCamera: NSObject {
         captureSession?.addInput(deviceInput)
 
         //output
+        captureSession?.addOutput(photoOutput)
+
 
         //preview
         let captureVideoPreview = AVCaptureVideoPreviewLayer(session: captureSession)!
@@ -41,8 +46,18 @@ class AVSelfCamera: NSObject {
     }
     
 
-    func takePhoto() -> UIImage {
-        return UIImage()
+
+}
+
+extension AVSelfCamera: AVCapturePhotoCaptureDelegate {
+    func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+        guard let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer), let selfTaken = UIImage(data: imageData) else {
+            //TODO: Handle error
+            print("error")
+            return
+        }
+        stop()
+        takePhotoCompletion?(selfTaken)
     }
 }
 
@@ -55,5 +70,19 @@ extension AVSelfCamera: SelfCamera {
     func stop() {
         captureSession?.stopRunning()
     }
-    
+
+    func takePhoto(completion: @escaping (UIImage) -> Void) {
+        takePhotoCompletion = completion
+        let settings = AVCapturePhotoSettings()
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+        let previewFormat = [
+            kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+            kCVPixelBufferWidthKey as String: 160,
+            kCVPixelBufferHeightKey as String: 160
+        ]
+        settings.previewPhotoFormat = previewFormat
+
+        photoOutput.capturePhoto(with: settings, delegate: self)
+    }
+
 }

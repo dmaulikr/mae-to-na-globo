@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,11 +86,58 @@ frontal</string>
                         <outlet property="instruction" destination="WhE-Wb-GmS" id="4xV-FA-V53"/>
                         <outlet property="internalShot" destination="IVA-fp-wTT" id="vIc-Dw-wrx"/>
                         <outlet property="videoFrame" destination="bDa-Vm-6RO" id="nag-TV-rrd"/>
+                        <segue destination="WOb-BG-BHP" kind="show" identifier="showPhotoTaken" id="Y0p-gv-NOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwq-jm-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5674.3999999999996" y="-1158.1709145427287"/>
+        </scene>
+        <!--Photo Taken Display View Controller-->
+        <scene sceneID="LCl-yO-9ec">
+            <objects>
+                <viewController id="WOb-BG-BHP" customClass="PhotoTakenDisplayViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ni-0D-clZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="bC0-Bx-32c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="44o-cF-wdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wyf-sM-HGo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvV-GH-OQI">
+                                <rect key="frame" x="16" y="616" width="343" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="5MF-r5-XFf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Aceitar">
+                                    <color key="titleColor" red="0.19215686269999999" green="0.56078431370000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wyf-sM-HGo" firstAttribute="top" secondItem="44o-cF-wdJ" secondAttribute="top" id="7cK-oj-kxt"/>
+                            <constraint firstAttribute="trailing" secondItem="wyf-sM-HGo" secondAttribute="trailing" id="8yK-vy-AEE"/>
+                            <constraint firstItem="GvV-GH-OQI" firstAttribute="trailing" secondItem="44o-cF-wdJ" secondAttribute="trailingMargin" id="I27-rB-aJ4"/>
+                            <constraint firstItem="bC0-Bx-32c" firstAttribute="top" secondItem="GvV-GH-OQI" secondAttribute="bottom" constant="8" symbolic="YES" id="XQ2-GN-iQV"/>
+                            <constraint firstItem="wyf-sM-HGo" firstAttribute="leading" secondItem="44o-cF-wdJ" secondAttribute="leading" id="ZUo-FL-ClG"/>
+                            <constraint firstItem="GvV-GH-OQI" firstAttribute="leading" secondItem="44o-cF-wdJ" secondAttribute="leadingMargin" id="jBn-4v-t1k"/>
+                            <constraint firstItem="bC0-Bx-32c" firstAttribute="top" secondItem="wyf-sM-HGo" secondAttribute="bottom" id="pg0-WS-BmL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="wyf-sM-HGo" id="YF3-nR-Sz2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjH-WV-4o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4953" y="-1156"/>
         </scene>
     </scenes>
 </document>

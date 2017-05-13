@@ -23,6 +23,9 @@ class TakeSelfViewController: UIViewController {
     override func viewDidLoad() {
         setupUI()
         setupReadingLayer()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         startCamera()
     }
 
@@ -30,8 +33,30 @@ class TakeSelfViewController: UIViewController {
         readingLayer?.frame = videoFrame.bounds
     }
 
-    func startCamera() {
+    override func viewWillDisappear(_ animated: Bool) {
+        stopCamera()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPhotoTaken", let photoTaken = sender as? UIImage, let photoDisplayVC = segue.destination as? PhotoTakenDisplayViewController {
+            photoDisplayVC.photo = photoTaken
+        }
+    }
+
+    func takeSelf() {
+
+        selfCamera.takePhoto() { [unowned self] photoTaken in
+            self.performSegue(withIdentifier: "showPhotoTaken", sender: photoTaken)
+        }
+        
+    }
+
+    private func startCamera() {
         selfCamera.start()
+    }
+
+    private func stopCamera() {
+        selfCamera.stop()
     }
 
     private func setupUI() {
@@ -65,11 +90,7 @@ class TakeSelfViewController: UIViewController {
         internalShot.addGestureRecognizer(tap)
     }
 
-    func takeSelf() {
 
-        print("take self")
-
-    }
 
 
 }

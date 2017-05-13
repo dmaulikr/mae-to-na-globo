@@ -45,7 +45,6 @@ class QRCodeReaderViewController: UIViewController {
     override func viewDidLoad() {
         setupUI()
         setupReadingLayer()
-        startReading()
         bindOutputFromViewModel()
     }
 
@@ -53,8 +52,12 @@ class QRCodeReaderViewController: UIViewController {
         readingLayer?.frame = qrCodeFrame.bounds
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        startReading()
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
-        qrCodeReader.stopReading()
+        stopReading()
     }
 
     //MARK: Navigation
@@ -73,6 +76,10 @@ class QRCodeReaderViewController: UIViewController {
         qrCodeReader.startReading { [unowned self] (code) in
             self.bindInputToViewModel(code)
         }
+    }
+
+    private func stopReading() {
+        qrCodeReader.stopReading()
     }
 
     private func setupReadingLayer() {

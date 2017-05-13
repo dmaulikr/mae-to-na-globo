@@ -14,6 +14,6 @@ protocol SelfCamera {
 
     func start()
     func stop()
-    func takePhoto() -> UIImage
+    func takePhoto(completion: @escaping (UIImage) -> Void) 
 
 }
