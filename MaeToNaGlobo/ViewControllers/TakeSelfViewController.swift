@@ -16,8 +16,22 @@ class TakeSelfViewController: UIViewController {
     @IBOutlet weak var externalShot: UIView!
     @IBOutlet weak var internalShot: UIView!
 
+    private var readingLayer: CALayer?
+
+    var selfCamera: SelfCamera = AVSelfCamera()
+
     override func viewDidLoad() {
         setupUI()
+        setupReadingLayer()
+        startCamera()
+    }
+
+    override func viewDidLayoutSubviews() {
+        readingLayer?.frame = videoFrame.bounds
+    }
+
+    func startCamera() {
+        selfCamera.start()
     }
 
     private func setupUI() {
@@ -25,6 +39,16 @@ class TakeSelfViewController: UIViewController {
         makeInternalShotBordersRounded()
         addTouchEventsToShots()
     }
+
+
+    private func setupReadingLayer() {
+        readingLayer = selfCamera.videoPreview
+
+        if let readingLayer = readingLayer {
+            videoFrame.layer.addSublayer(readingLayer)
+        }
+    }
+
 
     private func makeExternalShotBordersRounded() {
         externalShot.layer.cornerRadius = 58.5
