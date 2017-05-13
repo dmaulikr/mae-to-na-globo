@@ -6,38 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="4DU-vg-096">
-            <objects>
-                <tableViewController id="tIf-FV-LUl" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zhv-rg-xfS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7Pd-vI-G8P">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Pd-vI-G8P" id="dXD-7o-7pU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="tIf-FV-LUl" id="8o8-0z-PcP"/>
-                            <outlet property="delegate" destination="tIf-FV-LUl" id="u9s-8Y-DwC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="MUs-Tb-SJA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AT2-Xn-e7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-102" y="339"/>
-        </scene>
         <!--Participar-->
         <scene sceneID="iGP-bM-4FH">
             <objects>
@@ -49,15 +21,98 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="tIf-FV-LUl" kind="relationship" relationship="rootViewController" id="aaZ-wy-niu"/>
+                        <segue destination="CdY-6h-MGd" kind="relationship" relationship="rootViewController" id="jYj-dZ-w7H"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzl-ZO-eiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1055" y="339"/>
         </scene>
+        <!--Code Reading Instructions-->
+        <scene sceneID="pmL-Wp-d8n">
+            <objects>
+                <viewController id="CdY-6h-MGd" customClass="QRCodeReadingInstructions" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9e-cx-7om"/>
+                        <viewControllerLayoutGuide type="bottom" id="6lj-QK-iDx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wXm-Py-A32">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leia o QR Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pn-K7-V9F">
+                                <rect key="frame" x="16" y="72" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ao ler, confirmaremos o  programa para você!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDv-dD-Cdb">
+                                <rect key="frame" x="16" y="123" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqf-Gj-FOa">
+                                <rect key="frame" x="75" y="221" width="224" height="224"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCodeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-jA-kta">
+                                        <rect key="frame" x="48" y="48" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="7V0-4V-tGO"/>
+                                            <constraint firstAttribute="width" constant="128" id="ads-uo-Swy"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19215686274509802" green="0.5607843137254902" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZSX-jA-kta" firstAttribute="centerX" secondItem="lqf-Gj-FOa" secondAttribute="centerX" id="1vA-ZH-VG8"/>
+                                    <constraint firstAttribute="height" constant="224" id="JJr-gy-wXk"/>
+                                    <constraint firstItem="ZSX-jA-kta" firstAttribute="centerY" secondItem="lqf-Gj-FOa" secondAttribute="centerY" id="Vta-Bm-Mue"/>
+                                    <constraint firstAttribute="width" constant="224" id="rMD-nw-2mg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-b2-x7f">
+                                <rect key="frame" x="16" y="567" width="343" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="mKu-4N-8ve"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.19215686274509802" green="0.5607843137254902" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3pn-K7-V9F" firstAttribute="top" secondItem="b9e-cx-7om" secondAttribute="bottom" constant="8" symbolic="YES" id="4Wi-CE-lIr"/>
+                            <constraint firstItem="DDv-dD-Cdb" firstAttribute="leading" secondItem="3pn-K7-V9F" secondAttribute="leading" id="Afd-77-Ayb"/>
+                            <constraint firstItem="lqf-Gj-FOa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DDv-dD-Cdb" secondAttribute="bottom" constant="8" symbolic="YES" id="BbV-2M-bbg"/>
+                            <constraint firstItem="9ar-b2-x7f" firstAttribute="leading" secondItem="DDv-dD-Cdb" secondAttribute="leading" id="Gf2-m5-dcZ"/>
+                            <constraint firstItem="3pn-K7-V9F" firstAttribute="leading" secondItem="wXm-Py-A32" secondAttribute="leadingMargin" id="IBq-1O-ROK"/>
+                            <constraint firstItem="9ar-b2-x7f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lqf-Gj-FOa" secondAttribute="bottom" constant="8" symbolic="YES" id="J4D-BW-MgE"/>
+                            <constraint firstItem="9ar-b2-x7f" firstAttribute="trailing" secondItem="DDv-dD-Cdb" secondAttribute="trailing" id="Qi8-2J-FcT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3pn-K7-V9F" secondAttribute="trailing" id="ba1-rD-K4O"/>
+                            <constraint firstItem="6lj-QK-iDx" firstAttribute="top" secondItem="9ar-b2-x7f" secondAttribute="bottom" constant="8" id="c4G-m5-xEN"/>
+                            <constraint firstItem="DDv-dD-Cdb" firstAttribute="trailing" secondItem="3pn-K7-V9F" secondAttribute="trailing" id="d0w-EM-Ssg"/>
+                            <constraint firstItem="DDv-dD-Cdb" firstAttribute="top" secondItem="3pn-K7-V9F" secondAttribute="bottom" constant="8" id="nRE-Cw-YLL"/>
+                            <constraint firstItem="lqf-Gj-FOa" firstAttribute="centerX" secondItem="wXm-Py-A32" secondAttribute="centerX" id="tBJ-mB-WBX"/>
+                            <constraint firstItem="lqf-Gj-FOa" firstAttribute="centerY" secondItem="wXm-Py-A32" secondAttribute="centerY" id="tRO-6W-4st"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QnB-hb-bSC"/>
+                    <connections>
+                        <outlet property="okButton" destination="9ar-b2-x7f" id="nBW-ld-Sd7"/>
+                        <outlet property="qrCodeIconContainer" destination="lqf-Gj-FOa" id="E7n-md-OGy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aa2-pe-nMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.39999999999998" y="328.78560719640183"/>
+        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="qrCodeIcon" width="64" height="64"/>
     </resources>
 </document>

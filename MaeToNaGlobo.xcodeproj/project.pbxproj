@@ -13,6 +13,7 @@
 		6525493C1EC794EC003D190F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525493A1EC794EC003D190F /* LaunchScreen.storyboard */; };
 		652549471EC794ED003D190F /* MaeToNaGloboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652549461EC794ED003D190F /* MaeToNaGloboTests.swift */; };
 		652549531EC79564003D190F /* QRCodeReading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652549521EC79564003D190F /* QRCodeReading.storyboard */; };
+		652549561EC79982003D190F /* QRCodeReadingInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652549551EC79982003D190F /* QRCodeReadingInstructions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		652549461EC794ED003D190F /* MaeToNaGloboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaeToNaGloboTests.swift; sourceTree = "<group>"; };
 		652549481EC794ED003D190F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652549521EC79564003D190F /* QRCodeReading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QRCodeReading.storyboard; path = Storyboards/QRCodeReading.storyboard; sourceTree = "<group>"; };
+		652549551EC79982003D190F /* QRCodeReadingInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeReadingInstructions.swift; path = ViewControllers/QRCodeReadingInstructions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				652549351EC794EC003D190F /* Main.storyboard */,
 				652549511EC79525003D190F /* Supporting files */,
 				652549541EC79569003D190F /* Storyboards */,
+				652549571EC79987003D190F /* ViewControllers */,
 			);
 			path = MaeToNaGlobo;
 			sourceTree = "<group>";
@@ -110,6 +113,14 @@
 				652549521EC79564003D190F /* QRCodeReading.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		652549571EC79987003D190F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				652549551EC79982003D190F /* QRCodeReadingInstructions.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652549301EC794EC003D190F /* AppDelegate.swift in Sources */,
+				652549561EC79982003D190F /* QRCodeReadingInstructions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
