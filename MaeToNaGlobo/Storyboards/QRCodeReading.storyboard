@@ -199,7 +199,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siga para o próximo passo e tira algumas selfies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-7h-Te8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siga para o próximo passo e tire algumas selfies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-7h-Te8">
                                 <rect key="frame" x="16" y="116" width="343" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,6 +215,9 @@
                                 <state key="normal" title="Próximo">
                                     <color key="titleColor" red="0.19215686269999999" green="0.56078431370000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7ng-W0-A9Q" kind="show" id="Gm1-z9-3B4"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">
                                 <rect key="frame" x="87" y="233.5" width="200" height="200"/>
@@ -248,6 +251,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvz-DQ-Qcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="329"/>
+        </scene>
+        <!--Selves-->
+        <scene sceneID="HJB-ng-wwl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Selves" id="7ng-W0-A9Q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfY-hX-GRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909" y="328"/>
         </scene>
     </scenes>
     <resources>

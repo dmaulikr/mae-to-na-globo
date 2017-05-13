@@ -19,6 +19,8 @@
 		6525495F1EC7A830003D190F /* CodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525495E1EC7A830003D190F /* CodeReader.swift */; };
 		652549611EC7A83D003D190F /* AVCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652549601EC7A83D003D190F /* AVCodeReader.swift */; };
 		65EE72CA1EC7B458009B250E /* ProgramFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */; };
+		65EE72CC1EC7BBDC009B250E /* Selves.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EE72CB1EC7BBDC009B250E /* Selves.storyboard */; };
+		65EE72CE1EC7C00B009B250E /* TakeSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72CD1EC7C00B009B250E /* TakeSelfViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		6525495E1EC7A830003D190F /* CodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeReader.swift; sourceTree = "<group>"; };
 		652549601EC7A83D003D190F /* AVCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCodeReader.swift; sourceTree = "<group>"; };
 		65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgramFoundViewController.swift; path = ViewControllers/ProgramFoundViewController.swift; sourceTree = "<group>"; };
+		65EE72CB1EC7BBDC009B250E /* Selves.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selves.storyboard; path = Storyboards/Selves.storyboard; sourceTree = "<group>"; };
+		65EE72CD1EC7C00B009B250E /* TakeSelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TakeSelfViewController.swift; path = ViewControllers/TakeSelfViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				652549521EC79564003D190F /* QRCodeReading.storyboard */,
+				65EE72CB1EC7BBDC009B250E /* Selves.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				652549581EC7A3CB003D190F /* QRCodeReaderViewController.swift */,
 				65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */,
 				6525495D1EC7A824003D190F /* CodeReader */,
+				65EE72CD1EC7C00B009B250E /* TakeSelfViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				6525493C1EC794EC003D190F /* LaunchScreen.storyboard in Resources */,
 				652549391EC794EC003D190F /* Assets.xcassets in Resources */,
 				652549371EC794EC003D190F /* Main.storyboard in Resources */,
+				65EE72CC1EC7BBDC009B250E /* Selves.storyboard in Resources */,
 				652549531EC79564003D190F /* QRCodeReading.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +272,7 @@
 				65EE72CA1EC7B458009B250E /* ProgramFoundViewController.swift in Sources */,
 				652549301EC794EC003D190F /* AppDelegate.swift in Sources */,
 				652549561EC79982003D190F /* QRCodeReadingInstructions.swift in Sources */,
+				65EE72CE1EC7C00B009B250E /* TakeSelfViewController.swift in Sources */,
 				6525495B1EC7A701003D190F /* QRCodeReaderViewModel.swift in Sources */,
 				6525495F1EC7A830003D190F /* CodeReader.swift in Sources */,
 			);
