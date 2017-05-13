@@ -174,17 +174,17 @@
                     <connections>
                         <outlet property="qrCodeFrame" destination="FEf-6A-ecr" id="6F9-Xa-Sqk"/>
                         <outlet property="qrCodeGuide" destination="34H-sf-AEH" id="OCA-aC-zH2"/>
-                        <segue destination="T45-bk-kbu" kind="show" identifier="" id="hf6-at-DHa"/>
+                        <segue destination="T45-bk-kbu" kind="show" identifier="showProgramFound" id="hf6-at-DHa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDI-ni-tfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472.80000000000001" y="328.78560719640183"/>
         </scene>
-        <!--View Controller-->
+        <!--Program Found View Controller-->
         <scene sceneID="0vs-Fo-4hK">
             <objects>
-                <viewController id="T45-bk-kbu" sceneMemberID="viewController">
+                <viewController id="T45-bk-kbu" customClass="ProgramFoundViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gAN-5k-3Sg"/>
                         <viewControllerLayoutGuide type="bottom" id="pTj-9o-scE"/>
@@ -199,7 +199,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centralize o QR code no frame abaixo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-7h-Te8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siga para o próximo passo e tira algumas selfies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-7h-Te8">
                                 <rect key="frame" x="16" y="116" width="343" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,6 +241,9 @@
                             <constraint firstItem="HUQ-53-IZd" firstAttribute="leading" secondItem="tZ8-Ud-orv" secondAttribute="leadingMargin" id="utV-4l-ve2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoView" destination="tGH-bf-Rhy" id="cQz-Zd-mCS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvz-DQ-Qcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

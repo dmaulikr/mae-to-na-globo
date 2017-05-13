@@ -7,16 +7,27 @@
 //
 
 import Foundation
+//TODO: Remove UIKit after removing mock
+import UIKit
 
+enum Result<T> {
+    case success(T)
+    case failure(Error)
+}
 
 class QRCodeReaderViewModel {
 
     var code: String = "" {
         didSet {
-            print("search on service")
+            let logo: UIImage = #imageLiteral(resourceName: "logoEncontro")
+            if let logoData = UIImagePNGRepresentation(logo) {
+                didReturnFromApi?(.success(logoData))
+            }
+
         }
     }
-    
+
+    var didReturnFromApi: ((Result<Data>) -> Void)?
 
 
 }

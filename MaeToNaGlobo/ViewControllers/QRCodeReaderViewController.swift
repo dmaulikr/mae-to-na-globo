@@ -24,11 +24,29 @@ class QRCodeReaderViewController: UIViewController {
         viewModel.code = code
     }
 
+    private func bindOutputFromViewModel() {
+        viewModel.didReturnFromApi = { [unowned self] result in
+
+            switch result {
+            case .success(let imageData):
+                let logoFound = UIImage(data: imageData)
+                self.performSegue(withIdentifier: "showProgramFound", sender: logoFound)
+            case .failure(let error):
+                //TODO: Handle error
+                print(error)
+                break
+            }
+            
+
+        }
+    }
+
     //MARK: life cycle
     override func viewDidLoad() {
         setupUI()
         setupReadingLayer()
         startReading()
+        bindOutputFromViewModel()
     }
 
     override func viewDidLayoutSubviews() {
@@ -37,6 +55,15 @@ class QRCodeReaderViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         qrCodeReader.stopReading()
+    }
+
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showProgramFound",
+            let logo = sender as? UIImage,
+            let programFoundVC = segue.destination as? ProgramFoundViewController {
+            programFoundVC.logo = logo
+        }
     }
 
 
