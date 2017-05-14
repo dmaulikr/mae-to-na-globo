@@ -43,6 +43,10 @@ class PhotoTakenDisplayViewController: UIViewController {
             takeSelfVC.participationModel = participationModel
             takeSelfVC.eachPhoto = .second
         }
+
+        if segue.identifier == "showDone" {
+            segue.destination.navigationItem.hidesBackButton = true
+        }
     }
 
     private func sendImages() {
@@ -60,8 +64,10 @@ class PhotoTakenDisplayViewController: UIViewController {
 
                 switch result {
                 case .success:
-                    print("foi")
+
+                    self.performSegue(withIdentifier: "showDone", sender: nil)
                 case .failure(let error):
+                    //TODO Handler error
                     print(error)
                 }
 

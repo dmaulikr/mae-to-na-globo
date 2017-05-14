@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VisaCheckoutSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        VisaCheckoutSDK.configure(environment: .sandbox, apiKey: "XU2ESDGNXWEYUV1KOEGY21SmpAAFDRAkjFoXqa0RK-hU2KjDA")
+
         return true
     }
 
