@@ -18,6 +18,8 @@ class QRCodeReaderViewController: UIViewController {
     var qrCodeReader: CodeReader = AVCodeReader()
     var viewModel = QRCodeReaderViewModel()
 
+
+
     //MARK: ViewModel
 
     private func bindInputToViewModel(_ code: String) {
@@ -29,8 +31,11 @@ class QRCodeReaderViewController: UIViewController {
 
             switch result {
             case .success(let imageData):
-                let logoFound = UIImage(data: imageData)
-                self.performSegue(withIdentifier: "showProgramFound", sender: logoFound)
+                guard !self.viewModel.code.isEmpty else { fatalError("Returned from didReturnFromApi, but viewModel.code is empty ") }
+                guard let logoFound = UIImage(data: imageData) else { fatalError("Could not use data from didReturnFromApi to create UIImage") }
+
+                let model = ProgramFoundViewController.Model(logo: logoFound, qrCode: self.viewModel.code)
+                self.performSegue(withIdentifier: "showProgramFound", sender: model)
             case .failure(let error):
                 //TODO: Handle error
                 print(error)
@@ -63,9 +68,9 @@ class QRCodeReaderViewController: UIViewController {
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showProgramFound",
-            let logo = sender as? UIImage,
+            let model = sender as? ProgramFoundViewController.Model,
             let programFoundVC = segue.destination as? ProgramFoundViewController {
-            programFoundVC.logo = logo
+            programFoundVC.model = model
         }
     }
 

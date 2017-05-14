@@ -13,15 +13,32 @@ class TakeSelfViewController: UIViewController {
     @IBOutlet weak var instruction: UILabel!
     @IBOutlet weak var videoFrame: UIView!
 
+    @IBOutlet weak var instructions: UILabel!
     @IBOutlet weak var externalShot: UIView!
     @IBOutlet weak var internalShot: UIView!
 
     private var readingLayer: CALayer?
 
+    var participationModel: ParticipationModel?
+    var eachPhoto: EachPhoto = .first
+
+    var alternativeInstructions: String?
+
     var selfCamera: SelfCamera = AVSelfCamera()
 
+    enum EachPhoto {
+        case first
+        case second
+    }
+
     override func viewDidLoad() {
+        
+        guard participationModel != nil else {
+            fatalError("Can not continue taking selves if participationModel is nil")
+        }
+
         setupUI()
+        setupTitle()
         setupReadingLayer()
     }
 
@@ -38,15 +55,23 @@ class TakeSelfViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPhotoTaken", let photoTaken = sender as? UIImage, let photoDisplayVC = segue.destination as? PhotoTakenDisplayViewController {
-            photoDisplayVC.photo = photoTaken
+        if segue.identifier == "showPhotoTaken",  let photoDisplayVC = segue.destination as? PhotoTakenDisplayViewController , let participationModel = participationModel {
+
+            photoDisplayVC.participationModel = participationModel
+
         }
     }
 
     func takeSelf() {
 
         selfCamera.takePhoto() { [unowned self] photoTaken in
-            self.performSegue(withIdentifier: "showPhotoTaken", sender: photoTaken)
+
+            switch self.eachPhoto {
+                case .first: self.participationModel?.firstPhoto = photoTaken
+                case .second: self.participationModel?.secondPhoto = photoTaken
+            }
+            
+            self.performSegue(withIdentifier: "showPhotoTaken", sender: nil)
         }
         
     }
@@ -57,6 +82,12 @@ class TakeSelfViewController: UIViewController {
 
     private func stopCamera() {
         selfCamera.stop()
+    }
+
+    private func setupTitle() {
+        if let alternativeInstructions = alternativeInstructions {
+            instructions.text = alternativeInstructions
+        }
     }
 
     private func setupUI() {

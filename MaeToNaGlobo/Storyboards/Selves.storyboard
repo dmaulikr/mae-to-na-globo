@@ -27,10 +27,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eZ-Zv-lEc" userLabel="Instructions">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhE-Wb-GmS">
-                                        <rect key="frame" x="20" y="20" width="335" height="100"/>
+                                        <rect key="frame" x="20" y="66" width="335" height="74"/>
                                         <string key="text">Tire uma selfie 
 frontal</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
@@ -40,9 +40,7 @@ frontal</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="4kW-J4-yM0"/>
-                                    <constraint firstItem="WhE-Wb-GmS" firstAttribute="top" secondItem="6eZ-Zv-lEc" secondAttribute="top" constant="20" symbolic="YES" id="5yQ-Sm-REC"/>
-                                    <constraint firstItem="WhE-Wb-GmS" firstAttribute="centerY" secondItem="6eZ-Zv-lEc" secondAttribute="centerY" id="CdY-0l-on2"/>
+                                    <constraint firstAttribute="height" constant="160" id="4kW-J4-yM0"/>
                                     <constraint firstAttribute="bottom" secondItem="WhE-Wb-GmS" secondAttribute="bottom" constant="20" symbolic="YES" id="NkN-Do-LLe"/>
                                     <constraint firstItem="WhE-Wb-GmS" firstAttribute="centerX" secondItem="6eZ-Zv-lEc" secondAttribute="centerX" id="Tlb-EU-z8F"/>
                                     <constraint firstAttribute="trailing" secondItem="WhE-Wb-GmS" secondAttribute="trailing" constant="20" symbolic="YES" id="VmS-ne-ILm"/>
@@ -85,6 +83,7 @@ frontal</string>
                     <connections>
                         <outlet property="externalShot" destination="dGJ-d5-C37" id="mkp-6W-ybB"/>
                         <outlet property="instruction" destination="WhE-Wb-GmS" id="4xV-FA-V53"/>
+                        <outlet property="instructions" destination="WhE-Wb-GmS" id="O1V-ca-yaW"/>
                         <outlet property="internalShot" destination="IVA-fp-wTT" id="vIc-Dw-wrx"/>
                         <outlet property="videoFrame" destination="bDa-Vm-6RO" id="nag-TV-rrd"/>
                         <segue destination="WOb-BG-BHP" kind="show" identifier="showPhotoTaken" id="Y0p-gv-NOf"/>
@@ -92,7 +91,7 @@ frontal</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwq-jm-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5674.3999999999996" y="-1158.1709145427287"/>
+            <point key="canvasLocation" x="-5634" y="-1029"/>
         </scene>
         <!--Photo Taken Display View Controller-->
         <scene sceneID="LCl-yO-9ec">
@@ -119,6 +118,9 @@ frontal</string>
                                 <state key="normal" title="Aceitar">
                                     <color key="titleColor" red="0.19215686269999999" green="0.56078431370000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="acceptPhoto" destination="WOb-BG-BHP" eventType="touchUpInside" id="9AM-DJ-Td7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,11 +136,12 @@ frontal</string>
                     </view>
                     <connections>
                         <outlet property="photoImageView" destination="wyf-sM-HGo" id="YF3-nR-Sz2"/>
+                        <segue destination="BBn-Bz-sH6" kind="show" identifier="askNextSelf" id="KmJ-Oa-BIQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjH-WV-4o5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4953" y="-1156"/>
+            <point key="canvasLocation" x="-4527" y="-1384"/>
         </scene>
     </scenes>
 </document>

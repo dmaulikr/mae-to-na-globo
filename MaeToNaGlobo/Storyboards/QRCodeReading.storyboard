@@ -216,7 +216,7 @@
                                     <color key="titleColor" red="0.19215686269999999" green="0.56078431370000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7ng-W0-A9Q" kind="show" id="Gm1-z9-3B4"/>
+                                    <segue destination="7ng-W0-A9Q" kind="show" identifier="askSelves" id="Gm1-z9-3B4"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">

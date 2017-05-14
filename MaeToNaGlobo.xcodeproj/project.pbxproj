@@ -24,6 +24,7 @@
 		65EE72D01EC7C550009B250E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72CF1EC7C550009B250E /* Camera.swift */; };
 		65EE72D31EC7C5C1009B250E /* AVCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72D21EC7C5C1009B250E /* AVCamera.swift */; };
 		65EE72D51EC7D050009B250E /* PhotoTakenDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72D41EC7D050009B250E /* PhotoTakenDisplayViewController.swift */; };
+		65EE72D71EC7DBDC009B250E /* ParticipationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72D61EC7DBDC009B250E /* ParticipationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		65EE72CF1EC7C550009B250E /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = ViewControllers/Camera/Camera.swift; sourceTree = "<group>"; };
 		65EE72D21EC7C5C1009B250E /* AVCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVCamera.swift; path = ViewControllers/Camera/AVCamera.swift; sourceTree = "<group>"; };
 		65EE72D41EC7D050009B250E /* PhotoTakenDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTakenDisplayViewController.swift; path = ViewControllers/PhotoTakenDisplayViewController.swift; sourceTree = "<group>"; };
+		65EE72D61EC7DBDC009B250E /* ParticipationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipationModel.swift; path = ViewControllers/ParticipationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		652549571EC79987003D190F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				65EE72D61EC7DBDC009B250E /* ParticipationModel.swift */,
 				652549551EC79982003D190F /* QRCodeReadingInstructions.swift */,
 				652549581EC7A3CB003D190F /* QRCodeReaderViewController.swift */,
 				65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */,
@@ -295,6 +298,7 @@
 				65EE72D51EC7D050009B250E /* PhotoTakenDisplayViewController.swift in Sources */,
 				6525495F1EC7A830003D190F /* CodeReader.swift in Sources */,
 				65EE72D01EC7C550009B250E /* Camera.swift in Sources */,
+				65EE72D71EC7DBDC009B250E /* ParticipationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
