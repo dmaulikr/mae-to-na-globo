@@ -21,6 +21,8 @@ class QRCodeReadingInstructions: UIViewController {
     private func setupUI() {
         makeQrCodeIconContainerCircle()
         makeOkButtonBordersRounded()
+        makeNavigationBarTransparent()
+        changeNavigationBarTintColor()
     }
 
     private func makeQrCodeIconContainerCircle() {
@@ -29,6 +31,18 @@ class QRCodeReadingInstructions: UIViewController {
 
     private func makeOkButtonBordersRounded() {
         okButton.layer.cornerRadius = 4
+    }
+
+    private func makeNavigationBarTransparent() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = UIColor.clear
+        navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+
+    private func changeNavigationBarTintColor() {
+        navigationController?.navigationBar.tintColor = .white
     }
     
 }
