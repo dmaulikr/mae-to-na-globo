@@ -10,7 +10,11 @@ import UIKit
 
 class ProgramFoundViewController: UIViewController {
 
-    @IBOutlet weak var logoView: UIImageView!
+    @IBOutlet weak var logoView: UIImageView! {
+        didSet {
+            logoView.layer.cornerRadius =  100
+        }
+    }
 
     struct Model {
         var logo: UIImage

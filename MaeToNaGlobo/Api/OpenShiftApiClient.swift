@@ -15,7 +15,7 @@ class OpenShiftApiClient: ApiClient {
     func findLogo(forId programId: String,
                   completion: @escaping (ApiResult<Data>) -> Void) {
 
-        let findLogoUrl =  URL(string: "https://opensource.org/files/google.png")! // baseUrl.appendingPathComponent("show/\(programId)/name")
+        let findLogoUrl =  baseUrl.appendingPathComponent("/images/hackathon_globo/")
 
         let session = URLSession.shared
         let task = session.dataTask(with: findLogoUrl) { (data, response, error) in

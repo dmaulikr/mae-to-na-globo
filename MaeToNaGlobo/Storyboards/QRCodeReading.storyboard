@@ -219,7 +219,7 @@
                                     <segue destination="7ng-W0-A9Q" kind="show" identifier="askSelves" id="Gm1-z9-3B4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">
                                 <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="SCD-LF-L80"/>

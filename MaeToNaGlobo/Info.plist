@@ -26,7 +26,7 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>https://opensource.org/files/google.png</key>
+			<key>http://testing-teste.cloudapps.hackaton.solutionarchitectsredhat.com.br/</key>
 			<string></string>
 		</dict>
 	</dict>
