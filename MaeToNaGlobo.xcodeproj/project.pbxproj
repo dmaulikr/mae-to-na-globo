@@ -27,6 +27,7 @@
 		65EE72D71EC7DBDC009B250E /* ParticipationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72D61EC7DBDC009B250E /* ParticipationModel.swift */; };
 		65EE72D91EC7EB64009B250E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72D81EC7EB64009B250E /* ApiClient.swift */; };
 		65EE72DC1EC7EB9D009B250E /* OpenShiftApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72DB1EC7EB9D009B250E /* OpenShiftApiClient.swift */; };
+		65EE72DE1EC7FB31009B250E /* Memories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EE72DD1EC7FB31009B250E /* Memories.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		65EE72D61EC7DBDC009B250E /* ParticipationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipationModel.swift; path = ViewControllers/ParticipationModel.swift; sourceTree = "<group>"; };
 		65EE72D81EC7EB64009B250E /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = Api/ApiClient.swift; sourceTree = "<group>"; };
 		65EE72DB1EC7EB9D009B250E /* OpenShiftApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenShiftApiClient.swift; path = Api/OpenShiftApiClient.swift; sourceTree = "<group>"; };
+		65EE72DD1EC7FB31009B250E /* Memories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Memories.storyboard; path = Storyboards/Memories.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				652549521EC79564003D190F /* QRCodeReading.storyboard */,
 				65EE72CB1EC7BBDC009B250E /* Selves.storyboard */,
+				65EE72DD1EC7FB31009B250E /* Memories.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				6525493C1EC794EC003D190F /* LaunchScreen.storyboard in Resources */,
 				652549391EC794EC003D190F /* Assets.xcassets in Resources */,
 				652549371EC794EC003D190F /* Main.storyboard in Resources */,
+				65EE72DE1EC7FB31009B250E /* Memories.storyboard in Resources */,
 				65EE72CC1EC7BBDC009B250E /* Selves.storyboard in Resources */,
 				652549531EC79564003D190F /* QRCodeReading.storyboard in Resources */,
 			);
