@@ -10,7 +10,7 @@ import Foundation
 
 class OpenShiftApiClient: ApiClient {
 
-    let baseUrl = URL(string: "http://testing-teste.cloudapps.hackaton.solutionarchitectsredhat.com.br/")!
+    private let baseUrl = URL(string: "http://testing-teste.cloudapps.hackaton.solutionarchitectsredhat.com.br/")!
 
     func findLogo(forId programId: String,
                   completion: @escaping (ApiResult<Data>) -> Void) {
