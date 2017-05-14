@@ -32,7 +32,11 @@ class QRCodeReaderViewController: UIViewController {
             switch result {
             case .success(let imageData):
                 guard !self.viewModel.code.isEmpty else { fatalError("Returned from didReturnFromApi, but viewModel.code is empty ") }
-                guard let logoFound = UIImage(data: imageData) else { fatalError("Could not use data from didReturnFromApi to create UIImage") }
+                guard let logoFound = UIImage(data: imageData) else {
+                    //TODO: Handle error
+                    print("Could not use data from didReturnFromApi to create UIImage")
+                    return
+                }
 
                 let model = ProgramFoundViewController.Model(logo: logoFound, qrCode: self.viewModel.code)
                 self.performSegue(withIdentifier: "showProgramFound", sender: model)

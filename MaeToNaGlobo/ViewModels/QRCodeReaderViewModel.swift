@@ -17,17 +17,28 @@ enum Result<T> {
 
 class QRCodeReaderViewModel {
 
+    let apiClient: ApiClient = OpenShiftApiClient()
+
     var code: String = "" {
         didSet {
-            let logo: UIImage = #imageLiteral(resourceName: "logoEncontro")
-            if let logoData = UIImagePNGRepresentation(logo) {
-                didReturnFromApi?(.success(logoData))
-            }
+            findLogo(byId: code)
 
         }
     }
 
     var didReturnFromApi: ((Result<Data>) -> Void)?
 
+
+    private func findLogo(byId id: String) {
+        apiClient.findLogo(forId: id) { [unowned self] (result) in
+            switch result {
+            case .success(let data):
+                self.didReturnFromApi?(.success(data))
+
+            case .failure(let error):
+                self.didReturnFromApi?(.failure(error))
+            }
+        }
+    }
 
 }
