@@ -25,6 +25,7 @@
 		6535B01B1EC8403000D94BE9 /* VisaCheckoutSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6535B0191EC8403000D94BE9 /* VisaCheckoutSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6535B01F1EC8404B00D94BE9 /* TrustDefender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6535B01D1EC8404B00D94BE9 /* TrustDefender.framework */; };
 		6535B0201EC8404B00D94BE9 /* VisaCheckoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6535B01E1EC8404B00D94BE9 /* VisaCheckoutButton.swift */; };
+		6535B0221EC8722D00D94BE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6535B0211EC8722D00D94BE9 /* GoogleService-Info.plist */; };
 		656FBC231EC80839002E9B57 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FBC221EC80839002E9B57 /* MemoriesViewController.swift */; };
 		656FBC251EC81062002E9B57 /* ParticipationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */; };
 		65EE72CA1EC7B458009B250E /* ProgramFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */; };
@@ -85,9 +86,11 @@
 		652549601EC7A83D003D190F /* AVCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCodeReader.swift; sourceTree = "<group>"; };
 		6535B0151EC83D8C00D94BE9 /* Products.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Products.storyboard; path = Storyboards/Products.storyboard; sourceTree = "<group>"; };
 		6535B0171EC83EEF00D94BE9 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductsViewController.swift; path = ViewControllers/ProductsViewController.swift; sourceTree = "<group>"; };
-		6535B0191EC8403000D94BE9 /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisaCheckoutSDK.framework; sourceTree = "<group>"; };
+		6535B0191EC8403000D94BE9 /* VisaCheckoutSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisaCheckoutSDK.framework; path = ../VisaCheckoutSDK.framework; sourceTree = "<group>"; };
 		6535B01D1EC8404B00D94BE9 /* TrustDefender.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefender.framework; sourceTree = "<group>"; };
 		6535B01E1EC8404B00D94BE9 /* VisaCheckoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisaCheckoutButton.swift; sourceTree = "<group>"; };
+		6535B0211EC8722D00D94BE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6535B0231EC875E700D94BE9 /* MaeToNaGlobo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaeToNaGlobo.entitlements; sourceTree = "<group>"; };
 		656FBC221EC80839002E9B57 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoriesViewController.swift; path = ViewControllers/MemoriesViewController.swift; sourceTree = "<group>"; };
 		656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipationViewModel.swift; path = ViewModels/ParticipationViewModel.swift; sourceTree = "<group>"; };
 		65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgramFoundViewController.swift; path = ViewControllers/ProgramFoundViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +142,6 @@
 		652549231EC794EC003D190F = {
 			isa = PBXGroup;
 			children = (
-				6535B0191EC8403000D94BE9 /* VisaCheckoutSDK.framework */,
 				6525492E1EC794EC003D190F /* MaeToNaGlobo */,
 				652549451EC794ED003D190F /* MaeToNaGloboTests */,
 				6525492D1EC794EC003D190F /* Products */,
@@ -160,6 +162,7 @@
 		6525492E1EC794EC003D190F /* MaeToNaGlobo */ = {
 			isa = PBXGroup;
 			children = (
+				6535B0231EC875E700D94BE9 /* MaeToNaGlobo.entitlements */,
 				6525492F1EC794EC003D190F /* AppDelegate.swift */,
 				652549351EC794EC003D190F /* Main.storyboard */,
 				652549511EC79525003D190F /* Supporting files */,
@@ -183,11 +186,13 @@
 		652549511EC79525003D190F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				6535B0191EC8403000D94BE9 /* VisaCheckoutSDK.framework */,
 				6535B01D1EC8404B00D94BE9 /* TrustDefender.framework */,
 				6535B01E1EC8404B00D94BE9 /* VisaCheckoutButton.swift */,
 				652549381EC794EC003D190F /* Assets.xcassets */,
 				6525493A1EC794EC003D190F /* LaunchScreen.storyboard */,
 				6525493D1EC794EC003D190F /* Info.plist */,
+				6535B0211EC8722D00D94BE9 /* GoogleService-Info.plist */,
 			);
 			name = "Supporting files";
 			sourceTree = "<group>";
@@ -327,6 +332,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 266E2EENR9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					652549411EC794ED003D190F = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -360,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6525493C1EC794EC003D190F /* LaunchScreen.storyboard in Resources */,
+				6535B0221EC8722D00D94BE9 /* GoogleService-Info.plist in Resources */,
 				652549391EC794EC003D190F /* Assets.xcassets in Resources */,
 				652549371EC794EC003D190F /* Main.storyboard in Resources */,
 				65EE72DE1EC7FB31009B250E /* Memories.storyboard in Resources */,
@@ -633,6 +644,7 @@
 			baseConfigurationReference = C6A531E426A2D81CAB8A2024 /* Pods-MaeToNaGlobo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MaeToNaGlobo/MaeToNaGlobo.entitlements;
 				DEVELOPMENT_TEAM = 266E2EENR9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,6 +664,7 @@
 			baseConfigurationReference = BBA416B321F9780A6E8CA9BD /* Pods-MaeToNaGlobo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MaeToNaGlobo/MaeToNaGlobo.entitlements;
 				DEVELOPMENT_TEAM = 266E2EENR9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

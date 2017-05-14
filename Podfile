@@ -7,6 +7,9 @@ target 'MaeToNaGlobo' do
 
   # Pods for MaeToNaGlobo
   pod 'Alamofire', '~> 4.4'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  
   target 'MaeToNaGloboTests' do
     inherit! :search_paths
     # Pods for testing
