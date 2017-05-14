@@ -32,7 +32,7 @@
         <!--Code Reading Instructions-->
         <scene sceneID="pmL-Wp-d8n">
             <objects>
-                <viewController id="CdY-6h-MGd" customClass="QRCodeReadingInstructions" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CdY-6h-MGd" customClass="QRCodeReadingInstructions" customModule="To_na_Globo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b9e-cx-7om"/>
                         <viewControllerLayoutGuide type="bottom" id="6lj-QK-iDx"/>
@@ -117,7 +117,7 @@
         <!--Code Reader View Controller-->
         <scene sceneID="5gA-Qu-Zcd">
             <objects>
-                <viewController id="phA-f4-zJM" customClass="QRCodeReaderViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="phA-f4-zJM" customClass="QRCodeReaderViewController" customModule="To_na_Globo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GfO-Dq-ICV"/>
                         <viewControllerLayoutGuide type="bottom" id="zh2-Uq-Unb"/>
@@ -184,7 +184,7 @@
         <!--Program Found View Controller-->
         <scene sceneID="0vs-Fo-4hK">
             <objects>
-                <viewController id="T45-bk-kbu" customClass="ProgramFoundViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T45-bk-kbu" customClass="ProgramFoundViewController" customModule="To_na_Globo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gAN-5k-3Sg"/>
                         <viewControllerLayoutGuide type="bottom" id="pTj-9o-scE"/>
@@ -219,7 +219,7 @@
                                     <segue destination="7ng-W0-A9Q" kind="show" identifier="askSelves" id="Gm1-z9-3B4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEncontro" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-bf-Rhy">
                                 <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="SCD-LF-L80"/>
@@ -263,7 +263,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="logoEncontro" width="112" height="112"/>
+        <image name="logoEncontro" width="227" height="127"/>
         <image name="qrCodeIcon" width="64" height="64"/>
     </resources>
 </document>

@@ -14,13 +14,13 @@
         <!--Memories View Controller-->
         <scene sceneID="H1U-lo-nVf">
             <objects>
-                <tableViewController id="WD0-ez-Yc2" customClass="MemoriesViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="WD0-ez-Yc2" customClass="MemoriesViewController" customModule="To_na_Globo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="276" sectionHeaderHeight="28" sectionFooterHeight="28" id="iKY-Sg-NFa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoryCell" rowHeight="276" id="vpB-Tq-qfF" customClass="MemoryCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoryCell" rowHeight="276" id="vpB-Tq-qfF" customClass="MemoryCell" customModule="To_na_Globo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="276"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vpB-Tq-qfF" id="K8D-p0-Odw">
@@ -37,8 +37,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLz-Hr-tTQ">
-                                                    <rect key="frame" x="20" y="199" width="181" height="30"/>
-                                                    <state key="normal" title="Compartilhar no Facebook"/>
+                                                    <rect key="frame" x="20" y="199" width="90" height="30"/>
+                                                    <state key="normal" title="Compartilhar"/>
+                                                    <connections>
+                                                        <action selector="shareIt" destination="vpB-Tq-qfF" eventType="touchUpInside" id="2lG-2j-qGI"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,35 +51,29 @@
                                                 <constraint firstItem="EHd-CC-JzI" firstAttribute="top" secondItem="R6T-ZS-Jhn" secondAttribute="top" constant="8" id="P7q-PC-dg2"/>
                                             </constraints>
                                         </view>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hackthon" translatesAutoresizingMaskIntoConstraints="NO" id="Mtp-tW-h2F">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-fa-EWG" userLabel="Vide player">
                                             <rect key="frame" x="0.0" y="62" width="375" height="159"/>
+                                            <color key="backgroundColor" red="0.7703936911" green="0.7703936911" blue="0.7703936911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Mtp-tW-h2F" secondAttribute="height" multiplier="125:53" id="aP4-mo-AqN"/>
+                                                <constraint firstAttribute="width" secondItem="8gs-fa-EWG" secondAttribute="height" multiplier="125:53" id="bRR-Je-UkF"/>
                                             </constraints>
-                                        </imageView>
-                                        <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDU-Ig-pIX">
-                                            <rect key="frame" x="159" y="113.5" width="56" height="56"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="56" id="bX5-uo-OD4"/>
-                                                <constraint firstAttribute="width" constant="56" id="zyb-tI-HC7"/>
-                                            </constraints>
-                                            <state key="normal" image="playButton"/>
-                                        </button>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="mDU-Ig-pIX" firstAttribute="centerX" secondItem="Mtp-tW-h2F" secondAttribute="centerX" id="1eK-gS-Min"/>
-                                        <constraint firstItem="Mtp-tW-h2F" firstAttribute="top" secondItem="EHd-CC-JzI" secondAttribute="bottom" constant="12" id="Abi-D9-BOf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8gs-fa-EWG" secondAttribute="trailing" constant="-8" id="VXh-Yx-oKN"/>
                                         <constraint firstItem="R6T-ZS-Jhn" firstAttribute="top" secondItem="K8D-p0-Odw" secondAttribute="topMargin" constant="16" id="ZRy-LE-M9I"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Mtp-tW-h2F" secondAttribute="trailing" constant="-8" id="iwC-l2-EGc"/>
-                                        <constraint firstItem="Mtp-tW-h2F" firstAttribute="leading" secondItem="K8D-p0-Odw" secondAttribute="leadingMargin" constant="-8" id="jpg-dC-bhZ"/>
                                         <constraint firstItem="R6T-ZS-Jhn" firstAttribute="trailing" secondItem="K8D-p0-Odw" secondAttribute="trailingMargin" id="m6k-TV-CTf"/>
+                                        <constraint firstItem="8gs-fa-EWG" firstAttribute="leading" secondItem="K8D-p0-Odw" secondAttribute="leadingMargin" constant="-8" id="mhF-N4-wDw"/>
+                                        <constraint firstItem="8gs-fa-EWG" firstAttribute="top" secondItem="EHd-CC-JzI" secondAttribute="bottom" constant="12" id="tG2-O2-hg0"/>
+                                        <constraint firstItem="gLz-Hr-tTQ" firstAttribute="top" secondItem="8gs-fa-EWG" secondAttribute="bottom" constant="2" id="vwT-yO-WBu"/>
                                         <constraint firstItem="R6T-ZS-Jhn" firstAttribute="leading" secondItem="K8D-p0-Odw" secondAttribute="leadingMargin" id="x60-95-0mR"/>
-                                        <constraint firstItem="mDU-Ig-pIX" firstAttribute="centerY" secondItem="Mtp-tW-h2F" secondAttribute="centerY" id="xIm-bO-aN3"/>
-                                        <constraint firstItem="gLz-Hr-tTQ" firstAttribute="top" secondItem="Mtp-tW-h2F" secondAttribute="bottom" constant="2" id="xXW-SY-Nya"/>
                                         <constraint firstItem="R6T-ZS-Jhn" firstAttribute="bottom" secondItem="K8D-p0-Odw" secondAttribute="bottomMargin" id="yH5-sV-d0W"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="videoFrame" destination="8gs-fa-EWG" id="7Al-4d-zxY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -112,8 +109,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hackthon" width="300" height="225"/>
-        <image name="playButton" width="128" height="128"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

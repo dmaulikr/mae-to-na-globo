@@ -13,7 +13,7 @@
         <!--Take Self View Controller-->
         <scene sceneID="SbX-TY-rLP">
             <objects>
-                <viewController id="BBn-Bz-sH6" customClass="TakeSelfViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BBn-Bz-sH6" customClass="TakeSelfViewController" customModule="To_na_Globo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y9T-1O-tmk"/>
                         <viewControllerLayoutGuide type="bottom" id="CTT-bg-s5Z"/>
@@ -96,7 +96,7 @@ frontal</string>
         <!--Photo Taken Display View Controller-->
         <scene sceneID="LCl-yO-9ec">
             <objects>
-                <viewController id="WOb-BG-BHP" customClass="PhotoTakenDisplayViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WOb-BG-BHP" customClass="PhotoTakenDisplayViewController" customModule="To_na_Globo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ni-0D-clZ"/>
                         <viewControllerLayoutGuide type="bottom" id="bC0-Bx-32c"/>
