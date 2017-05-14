@@ -23,6 +23,7 @@ class QRCodeReadingInstructions: UIViewController {
         makeOkButtonBordersRounded()
         makeNavigationBarTransparent()
         changeNavigationBarTintColor()
+        hideTabBar()
     }
 
     private func makeQrCodeIconContainerCircle() {
@@ -43,6 +44,10 @@ class QRCodeReadingInstructions: UIViewController {
 
     private func changeNavigationBarTintColor() {
         navigationController?.navigationBar.tintColor = .white
+    }
+
+    private func hideTabBar() {
+        tabBarController?.tabBar.isHidden = true
     }
     
 }

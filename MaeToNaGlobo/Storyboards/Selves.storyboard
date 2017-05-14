@@ -13,7 +13,7 @@
         <!--Take Self View Controller-->
         <scene sceneID="SbX-TY-rLP">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="BBn-Bz-sH6" customClass="TakeSelfViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BBn-Bz-sH6" customClass="TakeSelfViewController" customModule="MaeToNaGlobo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y9T-1O-tmk"/>
                         <viewControllerLayoutGuide type="bottom" id="CTT-bg-s5Z"/>
@@ -24,7 +24,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDa-Vm-6RO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eZ-Zv-lEc" userLabel="Instructions">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
