@@ -26,6 +26,7 @@
 		6535B01F1EC8404B00D94BE9 /* TrustDefender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6535B01D1EC8404B00D94BE9 /* TrustDefender.framework */; };
 		6535B0201EC8404B00D94BE9 /* VisaCheckoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6535B01E1EC8404B00D94BE9 /* VisaCheckoutButton.swift */; };
 		6535B0221EC8722D00D94BE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6535B0211EC8722D00D94BE9 /* GoogleService-Info.plist */; };
+		6535B0271EC8C9F900D94BE9 /* hackathon_globo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6535B0261EC8C9F900D94BE9 /* hackathon_globo.mp4 */; };
 		656FBC231EC80839002E9B57 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FBC221EC80839002E9B57 /* MemoriesViewController.swift */; };
 		656FBC251EC81062002E9B57 /* ParticipationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */; };
 		65EE72CA1EC7B458009B250E /* ProgramFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */; };
@@ -91,6 +92,7 @@
 		6535B01E1EC8404B00D94BE9 /* VisaCheckoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisaCheckoutButton.swift; sourceTree = "<group>"; };
 		6535B0211EC8722D00D94BE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6535B0231EC875E700D94BE9 /* MaeToNaGlobo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaeToNaGlobo.entitlements; sourceTree = "<group>"; };
+		6535B0261EC8C9F900D94BE9 /* hackathon_globo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hackathon_globo.mp4; sourceTree = "<group>"; };
 		656FBC221EC80839002E9B57 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoriesViewController.swift; path = ViewControllers/MemoriesViewController.swift; sourceTree = "<group>"; };
 		656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipationViewModel.swift; path = ViewModels/ParticipationViewModel.swift; sourceTree = "<group>"; };
 		65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgramFoundViewController.swift; path = ViewControllers/ProgramFoundViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		652549511EC79525003D190F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				6535B0261EC8C9F900D94BE9 /* hackathon_globo.mp4 */,
 				6535B0191EC8403000D94BE9 /* VisaCheckoutSDK.framework */,
 				6535B01D1EC8404B00D94BE9 /* TrustDefender.framework */,
 				6535B01E1EC8404B00D94BE9 /* VisaCheckoutButton.swift */,
@@ -371,6 +374,7 @@
 			files = (
 				6525493C1EC794EC003D190F /* LaunchScreen.storyboard in Resources */,
 				6535B0221EC8722D00D94BE9 /* GoogleService-Info.plist in Resources */,
+				6535B0271EC8C9F900D94BE9 /* hackathon_globo.mp4 in Resources */,
 				652549391EC794EC003D190F /* Assets.xcassets in Resources */,
 				652549371EC794EC003D190F /* Main.storyboard in Resources */,
 				65EE72DE1EC7FB31009B250E /* Memories.storyboard in Resources */,

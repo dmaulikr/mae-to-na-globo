@@ -13,6 +13,10 @@ import AVKit
 
 class MemoriesViewController: UITableViewController {
 
+    override func viewDidLoad() {
+        navigationController?.isNavigationBarHidden = true
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -47,12 +51,17 @@ class MemoryCell: UITableViewCell {
 
         playerController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        let url = URL(string: "http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v")!
+        guard let path = Bundle.main.path(forResource: "hackathon_globo", ofType:"mp4") else {
+            debugPrint("hackathon_globo.mp4 not found")
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+
         playerController.player = AVPlayer(url: url)
     }
 
     @IBAction func shareIt() {
-        share?("http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v")
+        share?("http://webserver.cloudapps.hackaton.solutionarchitectsredhat.com.br/hackathon_globo.mp4")
     }
 
 }

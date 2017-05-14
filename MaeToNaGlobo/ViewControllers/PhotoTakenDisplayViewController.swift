@@ -39,7 +39,7 @@ class PhotoTakenDisplayViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "askNextSelf", let takeSelfVC = segue.destination as? TakeSelfViewController {
-            takeSelfVC.alternativeInstructions = "Tire uma self olhando para um lado"
+            takeSelfVC.alternativeInstructions = "Tire uma selfie olhando para um lado"
             takeSelfVC.participationModel = participationModel
             takeSelfVC.eachPhoto = .second
         }
