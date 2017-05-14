@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8CCCBB69A17406083D3833 /* Pods_MaeToNaGlobo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E9630FB497B1E987F1585 /* Pods_MaeToNaGlobo.framework */; };
 		652549301EC794EC003D190F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525492F1EC794EC003D190F /* AppDelegate.swift */; };
 		652549371EC794EC003D190F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652549351EC794EC003D190F /* Main.storyboard */; };
 		652549391EC794EC003D190F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652549381EC794EC003D190F /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		6525495F1EC7A830003D190F /* CodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525495E1EC7A830003D190F /* CodeReader.swift */; };
 		652549611EC7A83D003D190F /* AVCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652549601EC7A83D003D190F /* AVCodeReader.swift */; };
 		656FBC231EC80839002E9B57 /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FBC221EC80839002E9B57 /* MemoriesViewController.swift */; };
+		656FBC251EC81062002E9B57 /* ParticipationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */; };
 		65EE72CA1EC7B458009B250E /* ProgramFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */; };
 		65EE72CC1EC7BBDC009B250E /* Selves.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EE72CB1EC7BBDC009B250E /* Selves.storyboard */; };
 		65EE72CE1EC7C00B009B250E /* TakeSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72CD1EC7C00B009B250E /* TakeSelfViewController.swift */; };
@@ -29,6 +31,7 @@
 		65EE72D91EC7EB64009B250E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72D81EC7EB64009B250E /* ApiClient.swift */; };
 		65EE72DC1EC7EB9D009B250E /* OpenShiftApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE72DB1EC7EB9D009B250E /* OpenShiftApiClient.swift */; };
 		65EE72DE1EC7FB31009B250E /* Memories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65EE72DD1EC7FB31009B250E /* Memories.storyboard */; };
+		F97D40C1F2D5CE27FB1D9106 /* Pods_MaeToNaGloboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB970FAD7521C9EA5546C88B /* Pods_MaeToNaGloboTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D8E9630FB497B1E987F1585 /* Pods_MaeToNaGlobo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaeToNaGlobo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F50BEF8C4C79057E4C8D71F /* Pods-MaeToNaGloboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaeToNaGloboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaeToNaGloboTests/Pods-MaeToNaGloboTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C788977B93A2CB99B7CD87C /* Pods-MaeToNaGloboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaeToNaGloboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaeToNaGloboTests/Pods-MaeToNaGloboTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6525492C1EC794EC003D190F /* MaeToNaGlobo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaeToNaGlobo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6525492F1EC794EC003D190F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		652549361EC794EC003D190F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 		6525495E1EC7A830003D190F /* CodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeReader.swift; sourceTree = "<group>"; };
 		652549601EC7A83D003D190F /* AVCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCodeReader.swift; sourceTree = "<group>"; };
 		656FBC221EC80839002E9B57 /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoriesViewController.swift; path = ViewControllers/MemoriesViewController.swift; sourceTree = "<group>"; };
+		656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticipationViewModel.swift; path = ViewModels/ParticipationViewModel.swift; sourceTree = "<group>"; };
 		65EE72C91EC7B458009B250E /* ProgramFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgramFoundViewController.swift; path = ViewControllers/ProgramFoundViewController.swift; sourceTree = "<group>"; };
 		65EE72CB1EC7BBDC009B250E /* Selves.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Selves.storyboard; path = Storyboards/Selves.storyboard; sourceTree = "<group>"; };
 		65EE72CD1EC7C00B009B250E /* TakeSelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TakeSelfViewController.swift; path = ViewControllers/TakeSelfViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +75,9 @@
 		65EE72D81EC7EB64009B250E /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = Api/ApiClient.swift; sourceTree = "<group>"; };
 		65EE72DB1EC7EB9D009B250E /* OpenShiftApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenShiftApiClient.swift; path = Api/OpenShiftApiClient.swift; sourceTree = "<group>"; };
 		65EE72DD1EC7FB31009B250E /* Memories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Memories.storyboard; path = Storyboards/Memories.storyboard; sourceTree = "<group>"; };
+		BBA416B321F9780A6E8CA9BD /* Pods-MaeToNaGlobo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaeToNaGlobo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaeToNaGlobo/Pods-MaeToNaGlobo.release.xcconfig"; sourceTree = "<group>"; };
+		C6A531E426A2D81CAB8A2024 /* Pods-MaeToNaGlobo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaeToNaGlobo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaeToNaGlobo/Pods-MaeToNaGlobo.debug.xcconfig"; sourceTree = "<group>"; };
+		DB970FAD7521C9EA5546C88B /* Pods_MaeToNaGloboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaeToNaGloboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8CCCBB69A17406083D3833 /* Pods_MaeToNaGlobo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,18 +93,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97D40C1F2D5CE27FB1D9106 /* Pods_MaeToNaGloboTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BCA1A58207DB3787CB298E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E9630FB497B1E987F1585 /* Pods_MaeToNaGlobo.framework */,
+				DB970FAD7521C9EA5546C88B /* Pods_MaeToNaGloboTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		652549231EC794EC003D190F = {
 			isa = PBXGroup;
 			children = (
 				6525492E1EC794EC003D190F /* MaeToNaGlobo */,
 				652549451EC794ED003D190F /* MaeToNaGloboTests */,
 				6525492D1EC794EC003D190F /* Products */,
+				710DA7881ED7A0C8A76F42A8 /* Pods */,
+				1BCA1A58207DB3787CB298E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				6525495A1EC7A701003D190F /* QRCodeReaderViewModel.swift */,
+				656FBC241EC81062002E9B57 /* ParticipationViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +225,17 @@
 			name = Api;
 			sourceTree = "<group>";
 		};
+		710DA7881ED7A0C8A76F42A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6A531E426A2D81CAB8A2024 /* Pods-MaeToNaGlobo.debug.xcconfig */,
+				BBA416B321F9780A6E8CA9BD /* Pods-MaeToNaGlobo.release.xcconfig */,
+				2C788977B93A2CB99B7CD87C /* Pods-MaeToNaGloboTests.debug.xcconfig */,
+				1F50BEF8C4C79057E4C8D71F /* Pods-MaeToNaGloboTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6525494B1EC794ED003D190F /* Build configuration list for PBXNativeTarget "MaeToNaGlobo" */;
 			buildPhases = (
+				ECF96D23B3ADBCBA93B76A0B /* [CP] Check Pods Manifest.lock */,
 				652549281EC794EC003D190F /* Sources */,
 				652549291EC794EC003D190F /* Frameworks */,
 				6525492A1EC794EC003D190F /* Resources */,
+				8FDCAB70B861A8BA9E271103 /* [CP] Embed Pods Frameworks */,
+				7CEBE5490F3DC967AB1F0FAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6525494E1EC794ED003D190F /* Build configuration list for PBXNativeTarget "MaeToNaGloboTests" */;
 			buildPhases = (
+				BF84DEA287AF94EACEE0A987 /* [CP] Check Pods Manifest.lock */,
 				6525493E1EC794ED003D190F /* Sources */,
 				6525493F1EC794ED003D190F /* Frameworks */,
 				652549401EC794ED003D190F /* Resources */,
+				61E6B8A2B94834DB4260E3B3 /* [CP] Embed Pods Frameworks */,
+				B95486F1C11111B8518DDA69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +344,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61E6B8A2B94834DB4260E3B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaeToNaGloboTests/Pods-MaeToNaGloboTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CEBE5490F3DC967AB1F0FAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaeToNaGlobo/Pods-MaeToNaGlobo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FDCAB70B861A8BA9E271103 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaeToNaGlobo/Pods-MaeToNaGlobo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B95486F1C11111B8518DDA69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaeToNaGloboTests/Pods-MaeToNaGloboTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF84DEA287AF94EACEE0A987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECF96D23B3ADBCBA93B76A0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		652549281EC794EC003D190F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +452,7 @@
 				65EE72D31EC7C5C1009B250E /* AVCamera.swift in Sources */,
 				65EE72CE1EC7C00B009B250E /* TakeSelfViewController.swift in Sources */,
 				6525495B1EC7A701003D190F /* QRCodeReaderViewModel.swift in Sources */,
+				656FBC251EC81062002E9B57 /* ParticipationViewModel.swift in Sources */,
 				65EE72D91EC7EB64009B250E /* ApiClient.swift in Sources */,
 				65EE72D51EC7D050009B250E /* PhotoTakenDisplayViewController.swift in Sources */,
 				6525495F1EC7A830003D190F /* CodeReader.swift in Sources */,
@@ -459,6 +594,7 @@
 		};
 		6525494C1EC794ED003D190F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A531E426A2D81CAB8A2024 /* Pods-MaeToNaGlobo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 266E2EENR9;
@@ -472,6 +608,7 @@
 		};
 		6525494D1EC794ED003D190F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA416B321F9780A6E8CA9BD /* Pods-MaeToNaGlobo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 266E2EENR9;
@@ -485,6 +622,7 @@
 		};
 		6525494F1EC794ED003D190F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C788977B93A2CB99B7CD87C /* Pods-MaeToNaGloboTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +637,7 @@
 		};
 		652549501EC794ED003D190F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F50BEF8C4C79057E4C8D71F /* Pods-MaeToNaGloboTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

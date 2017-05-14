@@ -16,4 +16,7 @@ enum ApiResult<T> {
 protocol ApiClient {
     func findLogo(forId: String,
                   completion: @escaping (ApiResult<Data>) -> Void)
+
+    func send(images: [Data], forId: String,
+              completion: @escaping (ApiResult<Void>) -> Void)
 }

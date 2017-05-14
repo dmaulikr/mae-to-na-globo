@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class OpenShiftApiClient: ApiClient {
 
@@ -35,8 +36,50 @@ class OpenShiftApiClient: ApiClient {
 
         task.resume()
 
+
+
     }
 
+    //TODO: Remove library whenever possilbe
+    func send(images: [Data], forId: String,
+              completion: @escaping (ApiResult<Void>) -> Void) {
+
+        let sendImagesUrl = baseUrl.appendingPathComponent("/images/hackathon_globo/upload")
+
+        Alamofire.upload(
+            multipartFormData: { (multipartFormData) in
+                for (index, imageDate) in images.enumerated() {
+                    multipartFormData.append(imageDate, withName: "file", fileName: "photo\(index).jpeg", mimeType: "image/jpeg")
+                }
+        },
+        to: sendImagesUrl.absoluteURL,
+        encodingCompletion: { (encodingResult) in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.validate().responseString { response in
+                    debugPrint(response)
+                    switch response.result {
+                    case .success:
+                        completion(.success())
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
+
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        })
+
+    }
+
+}
+
+extension Data {
+    mutating func appendString(_ str: String) {
+        self.append(Data(str.utf8))
+    }
 }
 
 extension NSError {
